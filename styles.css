@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --ink:#2b2118;
+  --muted:#766452;
+  --paper:#ead8b8;
+  --paper2:#f5e8cc;
+  --deep:#183b3d;
+  --gold:#b48a43;
+  --line:#b99a68;
+  --shadow:rgba(52,35,17,.22);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);font-family:"Vazirmatn",Tahoma,sans-serif;
+  background:
+    radial-gradient(circle at 20% 15%,rgba(255,255,255,.36),transparent 28%),
+    radial-gradient(circle at 85% 80%,rgba(112,75,29,.10),transparent 30%),
+    linear-gradient(135deg,#cdb58c,#ead8b8 35%,#d8c29a 70%,#c9ae7e);
+  min-height:100vh;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;
+  background-image:radial-gradient(#5d462a .7px,transparent .7px);
+  background-size:7px 7px;mix-blend-mode:multiply;
+}
+a{color:inherit;text-decoration:none}
+.shell{width:min(1180px,92%);margin:auto}
+header.site-head{padding:34px 0 18px;text-align:center}
+.brand{font-family:"Amiri",serif;font-size:clamp(34px,6vw,64px);font-weight:700;letter-spacing:.2px}
+.tagline{color:var(--muted);font-size:15px;margin-top:2px}
+nav{
+  display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:25px 0 8px
+}
+nav a{
+  padding:8px 16px;border:1px solid rgba(103,73,37,.32);border-radius:999px;
+  background:rgba(247,232,201,.42);font-size:13px
+}
+nav a:hover{background:rgba(247,232,201,.82)}
+.hero{
+  min-height:390px;display:grid;place-items:center;text-align:center;
+  margin:18px 0 30px;padding:60px 24px;position:relative;overflow:hidden;
+  border:1px solid var(--line);border-radius:22px;
+  background:linear-gradient(90deg,rgba(245,231,202,.84),rgba(236,216,181,.72));
+  box-shadow:0 18px 45px var(--shadow),inset 0 0 60px rgba(111,76,31,.10)
+}
+.hero:after{
+  content:"";position:absolute;inset:13px;border:1px solid rgba(144,107,54,.55);
+  border-radius:15px;pointer-events:none
+}
+.orn{font-family:"Amiri",serif;color:var(--gold);font-size:28px}
+.hero h1{font-family:"Amiri",serif;font-size:clamp(40px,7vw,76px);margin:8px 0}
+.hero p{max-width:720px;line-height:2;color:#5d4a35}
+.author{font-family:"Amiri",serif;font-size:24px;margin-top:18px}
+.section-title{font-family:"Amiri",serif;font-size:34px;text-align:center;margin:36px 0 18px}
+.poem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{
+  display:block;padding:24px 22px;border:1px solid var(--line);border-radius:16px;
+  background:rgba(247,232,201,.68);box-shadow:0 8px 22px rgba(63,42,21,.12);
+  transition:.2s transform,.2s box-shadow
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 13px 28px rgba(63,42,21,.20)}
+.card h3{font-family:"Amiri",serif;font-size:25px;margin:0 0 10px}
+.card p{line-height:1.9;color:var(--muted);margin:0}
+.card .kind{font-size:12px;color:var(--gold);margin-top:14px}
+footer{padding:45px 0 35px;text-align:center;color:var(--muted);font-size:13px}
+
+.poem-page{padding:30px 0 70px}
+.poem-paper{
+  position:relative;background:rgba(246,232,203,.88);
+  border:1px solid var(--line);border-radius:20px;
+  box-shadow:0 20px 55px var(--shadow),inset 0 0 70px rgba(116,76,25,.08);
+  padding:55px clamp(22px,6vw,78px)
+}
+.poem-paper:before{
+  content:"";position:absolute;inset:12px;border:1px solid rgba(149,112,58,.55);
+  border-radius:13px;pointer-events:none
+}
+.poem-head{text-align:center;position:relative}
+.poem-head .kind{color:var(--gold);font-size:13px}
+.poem-head h1{font-family:"Amiri",serif;font-size:clamp(34px,6vw,58px);margin:8px 0 4px}
+.poem-head h2{font-family:"Amiri",serif;font-weight:400;font-size:23px;color:#5d4b38;margin:0}
+.poem-head .byline{font-family:"Amiri",serif;font-size:20px;margin:16px 0 8px}
+.divider{width:160px;height:1px;background:var(--line);margin:24px auto 38px;position:relative}
+.divider:after{content:"✦";position:absolute;left:50%;top:-14px;transform:translateX(-50%);background:#f4e4c4;padding:0 12px;color:var(--gold)}
+.poem{
+  direction:rtl;text-align:center;white-space:pre-line;
+  font-family:"Amiri","Vazirmatn",serif;font-size:clamp(19px,2.1vw,24px);
+  line-height:2.35;max-width:900px;margin:auto
+}
+.poem.long{font-size:clamp(17px,1.65vw,21px);line-height:2.25}
+.back{display:inline-block;margin:25px 0 0;padding:9px 17px;border:1px solid var(--line);border-radius:999px;font-size:13px;background:rgba(255,248,231,.42)}
+.back:hover{background:rgba(255,248,231,.78)}
+.note{text-align:center;color:var(--muted);font-size:12px;margin-top:28px}
+@media(max-width:650px){
+  .hero{min-height:330px;padding:40px 18px}
+  .poem-paper{padding:40px 16px}
+  .poem-paper:before{inset:8px}
+  .poem{font-size:18px;line-height:2.2}
+  .poem.long{font-size:16px;line-height:2.15}
+}
